@@ -1,4 +1,4 @@
-lockfileVersion: '6.0'
+lockfileVersion: '6.1'
 
 settings:
   autoInstallPeers: true
@@ -8,6 +8,9 @@ dependencies:
   '@ark-ui/solid':
     specifier: ^5.0.0
     version: 5.0.0(solid-js@1.9.5)
+  '@solid-primitives/keyed':
+    specifier: ^1.5.0
+    version: 1.5.0(solid-js@1.9.5)
   solid-js:
     specifier: ^1.9.5
     version: 1.9.5
@@ -1417,6 +1420,7 @@ packages:
     resolution: {integrity: sha512-BGO5LtrGC7vxnqucAe/rmvKdJllfGaYWdyABvyMoXQlfYMb2bbRuReWR5tEGE//4LcNJj9XrkovTqNYRFZHAMQ==}
     engines: {node: '>=18'}
     hasBin: true
+    requiresBuild: true
     optionalDependencies:
       '@esbuild/aix-ppc64': 0.25.1
       '@esbuild/android-arm': 0.25.1
