@@ -7,19 +7,22 @@ import { eventFixer } from "./eventFixer";
 import { Toggle } from "@ark-ui/solid/toggle";
 import { Rerun } from "@solid-primitives/keyed";
 
-const [useEventFixer, setUseEventFixer] = createSignal(true);
+const [useEventFixer, setUseEventFixer] = createSignal(false);
 
 const App: Component = () => {
   return (
     <Portal useShadow={true}>
-      <Toggle.Root onPressedChange={setUseEventFixer}>
-        Fix events
-        <Toggle.Indicator fallback="🔴">🟢</Toggle.Indicator>
-      </Toggle.Root>
       <SmartEnvironmentProvider>
         {() => {
           return (
             <FocusTrap>
+              <Toggle.Root
+                pressed={useEventFixer()}
+                onPressedChange={setUseEventFixer}
+              >
+                Fix events
+                <Toggle.Indicator fallback="🔴">🟢</Toggle.Indicator>
+              </Toggle.Root>
               <Button></Button>
               <Button></Button>
               <Button></Button>
