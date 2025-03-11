@@ -27,13 +27,15 @@ const App: Component = () => {
           );
         }}
       </SmartEnvironmentProvider>
+
+      <p>Tooltips will open on focus only if events are fixed</p>
     </Portal>
   );
 };
 
 export const Button: Component = () => {
   return (
-    <Tooltip.Root>
+    <Tooltip.Root openDelay={0} closeDelay={0}>
       {/* Button */}
       <Rerun on={useEventFixer}>
         <Tooltip.Trigger
